@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.4.1)
 
-project(rknn_yolov8obbobb_demo)
+project(rknn_yolov8obb_demo)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,--allow-shlib-undefined")
 
 # install target and libraries
-set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/install/rknn_yolov8obbobb_demo_${CMAKE_SYSTEM_NAME})
+set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/install/rknn_yolov8obb_demo_${CMAKE_SYSTEM_NAME})
 
 set(CMAKE_SKIP_INSTALL_RPATH FALSE)
 set(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
@@ -71,15 +71,15 @@ include_directories( ${RGA_PATH}/include)
 
 set(CMAKE_INSTALL_RPATH "lib")
 
-# rknn_yolov8obbobb_demo
+# rknn_yolov8obb_demo
 include_directories( ${CMAKE_SOURCE_DIR}/include)
 
-add_executable(rknn_yolov8obbobb_demo
+add_executable(rknn_yolov8obb_demo
         src/main.cc
         src/postprocess.cc
 )
 
-target_link_libraries(rknn_yolov8obbobb_demo
+target_link_libraries(rknn_yolov8obb_demo
   ${RKNN_RT_LIB}
   ${RGA_LIB}
   ${OpenCV_LIBS}
@@ -87,8 +87,8 @@ target_link_libraries(rknn_yolov8obbobb_demo
 
 
 # install target and libraries
-set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/install/rknn_yolov8obbobb_demo_${CMAKE_SYSTEM_NAME})
-install(TARGETS rknn_yolov8obbobb_demo DESTINATION ./)
+set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/install/rknn_yolov8obb_demo_${CMAKE_SYSTEM_NAME})
+install(TARGETS rknn_yolov8obb_demo DESTINATION ./)
 
 install(PROGRAMS ${RKNN_RT_LIB} DESTINATION lib)
 install(PROGRAMS ${RGA_LIB} DESTINATION lib)
