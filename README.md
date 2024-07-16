@@ -45,7 +45,7 @@ int main(int argc, char **argv)
 
 ## rk3588上测试效果
 
-冒号“:”前的数子是coco的80类对应的类别，后面的浮点数是目标得分。（类别:得分）
+冒号“:”前的数子是15类对应的类别，后面的浮点数是目标得分。（类别:得分）
 
 ![images](https://github.com/cqu20160901/yolov8obb_rknn_Cplusplus/blob/main/examples/rknn_yolov8_obb_demo/test_result.jpg)
 
