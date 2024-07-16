@@ -320,9 +320,9 @@ int detect(char *model_path, char *image_path, char *save_image_path)
 
 int main(int argc, char **argv)
 {
-    char model_path[256] = "/home/firefly/zhangqian/rknn/rknpu2_1.4.0/examples/rknn_yolov8_obb_demo/model/RK3588/yyolov8n-obb.rknn";
-    char image_path[256] = "/home/firefly/zhangqian/rknn/rknpu2_1.4.0/examples/rknn_yolov8_obb_demo/test.jpg";
-    char save_image_path[256] = "/home/firefly/zhangqian/rknn/rknpu2_1.4.0/examples/rknn_yolov8_obb_demo/test_result.jpg";
+    char model_path[256] = "/home/firefly/zhangqian/rknn/examples/rknn_yolov8_obb_demo/model/RK3588/yyolov8n-obb.rknn";
+    char image_path[256] = "/home/firefly/zhangqian/rknn/examples/rknn_yolov8_obb_demo/test.jpg";
+    char save_image_path[256] = "/home/firefly/zhangqian/rknn/examples/rknn_yolov8_obb_demo/test_result.jpg";
 
     detect(model_path, image_path, save_image_path);
     return 0;
